@@ -1,6 +1,6 @@
-Stochastic Interest Rate Modelling and Yield Curve Reconstruction using CIR & CIR++
+**Stochastic Interest Rate Modelling and Yield Curve Reconstruction using CIR & CIR++**
 
-Project Overview
+**Project Overview**
 
 This project implements the Cox-Ingersoll-Ross (CIR) short-rate model and its deterministic-shift extension CIR++ for zero-coupon yield curve reconstruction and prediction.
 
@@ -21,7 +21,7 @@ The project includes:
 
 ⸻
 
-Dataset Description
+**Dataset Description**
 
 Training Dataset
 
@@ -62,9 +62,9 @@ This acts as the model input for reconstructing the entire yield curve.
 
 ⸻
 
-Project Workflow
+**Project Workflow**
 
-1. Exploratory Data Analysis
+**1. Exploratory Data Analysis**
 
 Performed:
 
@@ -75,7 +75,7 @@ Performed:
 * Yield curve snapshots
 * Time-series visualization
 
-2. Outlier Detection
+**2. Outlier Detection**
 
 Three approaches were used:
 
@@ -103,7 +103,7 @@ Large day-to-day changes were identified.
 
 ⸻
 
-3. Data Cleaning
+**3. Data Cleaning**
 
 The following preprocessing steps were applied:
 
@@ -115,7 +115,7 @@ The following preprocessing steps were applied:
 
 ⸻
 
-4. Time-Series Analysis
+**4. Time-Series Analysis**
 
 Studied:
 
@@ -126,7 +126,7 @@ Studied:
 
 ⸻
 
-5. CIR Model Calibration
+**5. CIR Model Calibration**
 
 The CIR short-rate process is:
 
@@ -142,7 +142,7 @@ Model parameters are estimated using the training dataset.
 
 ⸻
 
-6. Yield Curve Reconstruction
+**6. Yield Curve Reconstruction**
 
 The 3-Month yield is treated as a proxy for the instantaneous short rate.
 
@@ -155,7 +155,7 @@ using the calibrated CIR model.
 
 ⸻
 
-7. CIR++ Extension
+**7. CIR++ Extension**
 
 To improve curve fitting, a deterministic shift function is introduced:
 
@@ -170,19 +170,15 @@ This allows the model to better match the market term structure.
 
 ⸻
 
-8. Model Evaluation
+**8. Model Evaluation**
 
-Performance is measured using:
-
-R² Score
+Performance is measured using: R² Score
 
 Measures proportion of variance explained.
 
 R² = 1 indicates perfect fit.
 
-RMSE
-
-Root Mean Squared Error measured in basis points (bps).
+RMSE : Root Mean Squared Error measured in basis points (bps).
 
 Lower RMSE indicates better predictions.
 
@@ -192,7 +188,7 @@ Average prediction error.
 
 ⸻
 
-9. Train / Validation Testing
+**9. Train / Validation Testing**
 
 An 80/20 chronological split is used:
 
@@ -203,7 +199,7 @@ This evaluates model generalization on unseen periods.
 
 ⸻
 
-10. Out-of-Sample Prediction
+**10. Out-of-Sample Prediction**
 
 Using only the 3M yield from test_data_3M.csv:
 
@@ -224,7 +220,7 @@ Predictions are generated for:
 
 ⸻
 
-Key Findings
+**Key Findings**
 
 * Yield series exhibit extremely high persistence.
 * Strong positive correlations exist across all maturities.
@@ -235,7 +231,7 @@ Key Findings
 
 ⸻
 
-Output
+**Output**
 
 The final output file contains CIR++ predicted yields for all maturities:
 
@@ -256,7 +252,7 @@ Columns:
 
 ⸻
 
-Technologies Used
+**Technologies Used**
 
 * Python
 * NumPy
@@ -268,7 +264,7 @@ Technologies Used
 
 ⸻
 
-References
+**References**
 
 1. Cox, Ingersoll and Ross (1985), “A Theory of the Term Structure of Interest Rates”.
 2. Brigo & Mercurio (2001), “A Deterministic-Shift Extension of Analytically Tractable Short-Rate Models”.
